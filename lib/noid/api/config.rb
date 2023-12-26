@@ -39,22 +39,5 @@ module Noid
         h
       end
     end
-
-    class ConfigLoader
-      def load_config
-        touch_config_path
-        IniFile.load(config_path)
-      end
-
-      def config_path
-        File.join(config_dir, 'config')
-      end
-
-      def touch_config_path
-        return false if File.exists?(config_path)
-        FileUtils.mkdir_p(config_dir)
-        FileUtils.touch(config_path)
-      end
-    end
   end
 end
