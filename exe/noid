@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'noid/api'
+
+Noid::Api::CLI.start
